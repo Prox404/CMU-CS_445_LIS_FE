@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    position: relative;
+    --side-bar-width: 250px;
+
+    .sidebar{
+        min-width: var(--side-bar-width);
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        background: #fff;
+        border-right: 1px solid #eee;
+    }
+
+    .content{
+        flex: 1;
+        margin-left: var(--side-bar-width);
+        padding: 20px;
+    }
+}
+

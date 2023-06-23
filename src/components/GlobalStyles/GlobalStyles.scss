@@ -1,0 +1,230 @@
+@import 'normalize.css';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #475464;
+    --blue: #007bff;
+    --black: #000;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --colorPrimary-tint-4: rgba(244, 42, 82, 1);
+    --colorPrimary-tint-8: rgba(234, 40, 78, 1);
+    --colorPrimary-tint-12: rgba(224, 39, 75, 1);
+    --colorPrimary-opacity-0: rgba(254, 44, 85, 0);
+    --colorPrimary-opacity-4: rgba(254, 44, 85, 0.04);
+    --colorPrimary-opacity-8: rgba(254, 44, 85, 0.08);
+    --colorPrimary-opacity-12: rgba(254, 44, 85, 0.12);
+    --fontWeightRegular: 400;
+    --fontWeightSemibold: 600;
+    --fontWeightBold: 700;
+    --fontSizeH1: 96px;
+    --fontSizeH2: 72px;
+    --fontSizeH3: 56px;
+    --fontSizeH4: 48px;
+    --fontSizeH5: 32px;
+    --fontSizeH6: 24px;
+    --fontSizeH7: 18px;
+    --fontSizeP1: 24px;
+    --fontSizeP2: 18px;
+    --fontSizeP3: 16px;
+    --fontSizeP4: 14px;
+    --fontSizeP5: 12px;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+
+    // default layout
+    --default-layout-header-height: 60px;
+    --default-layout-sidebar-width: 222px;
+    --default-layout-sidebar-close-width: 88px;
+    --search-border-radius: 5px;
+    --search-width: auto;
+    --search-height: 40px;
+    --search-top-spacer: 9px;
+    --search-button-width: 45px;
+
+}
+
+:root,
+[data-theme='light']:root {
+    --colorPrimary: #475464;
+    --colorLink: rgba(254, 44, 85, 1);
+    --colorPrimary2: rgba(22, 24, 35, 1);
+    --colorTextPrimary: #36393b;
+    --colorTextSecondary: rgba(22, 24, 35, 0.75);
+    --colorTextTertiary: rgba(22, 24, 35, 0.5);
+    --colorTextQuaternary: rgba(22, 24, 35, 0.34);
+    --colorBGPrimary: #f6f6f6;
+    --colorBGSecondary: rgba(255, 255, 255, 1);
+    --colorBGTertiary: rgba(255, 255, 255, 1);
+    --colorBGQuaternary: rgba(255, 255, 255, 1);
+    --colorBGQuinary: rgba(255, 255, 255, 1);
+    --colorBGSecondary2: rgba(255, 255, 255, 1);
+    --colorBGTertiary2: rgba(255, 255, 255, 1);
+    --colorBGPlaceholderDefault: rgba(22, 24, 35, 0.06);
+    --colorBGPlaceholderOpaque: rgba(241, 241, 241, 1);
+    --colorBGInput: rgba(22, 24, 35, 0.06);
+    --colorBGInput2: rgba(22, 24, 35, 0.06);
+    --colorBGView: rgba(22, 24, 35, 0.03);
+    --colorBGCreation3: rgba(248, 248, 248, 1);
+    --colorBGCreation4: rgba(255, 255, 255, 1);
+    --colorBGHover: rgba(22, 24, 35, 0.06);
+    --colorBGBrand: rgba(254, 44, 85, 0.06);
+    --colorLinePrimary: rgba(22, 24, 35, 0.2);
+    --colorLineSecondary: rgba(22, 24, 35, 0.12);
+    --colorLineInput: rgba(22, 24, 35, 0.5);
+    --colorLinePrimary2: rgba(22, 24, 35, 0.2);
+    --colorLineSecondary2: rgba(22, 24, 35, 0.12);
+    --colorLineSecondary3: rgba(22, 24, 35, 0.12);
+    --colorLineDarker: rgba(22, 24, 35, 0.12);
+    --colorSDSecondary: rgba(0, 0, 0, 0.5);
+    --colorSDTertiary: rgba(0, 0, 0, 0.2);
+    --popperBackground: rgb(255, 255, 255);
+    --scrollbar: rgba(22, 24, 35, 0.06);
+    --default-layout-sidebar-background-color: #FAF7F5;
+    --default-layout-sidebar-background-color-hover: #EFE6E3;
+    --form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+[data-theme='dark']:root {
+    --colorPrimary: #475464;
+    --colorLink: rgba(255, 59, 92, 1);
+    --colorPrimary2: rgba(255, 255, 255, 0.9);
+    --colorTextPrimary: rgba(255, 255, 255, 0.9);
+    --colorTextSecondary: rgba(255, 255, 255, 0.75);
+    --colorTextTertiary: rgba(255, 255, 255, 0.5);
+    --colorTextQuaternary: rgba(255, 255, 255, 0.34);
+    --colorBGPrimary: rgba(18, 18, 18, 1);
+    --colorBGSecondary: rgba(37, 37, 37, 1);
+    --colorBGTertiary: rgba(46, 46, 46, 1);
+    --colorBGQuaternary: rgba(56, 56, 56, 1);
+    --colorBGQuinary: rgba(75, 75, 75, 1);
+    --colorBGSecondary2: rgba(255, 255, 255, 0.08);
+    --colorBGTertiary2: rgba(255, 255, 255, 0.12);
+    --colorBGPlaceholderDefault: rgba(255, 255, 255, 0.08);
+    --colorBGPlaceholderOpaque: rgba(37, 37, 37, 1);
+    --colorBGInput: rgba(255, 255, 255, 0.12);
+    --colorBGInput2: rgba(255, 255, 255, 0.08);
+    --colorBGView: rgba(255, 255, 255, 0.04);
+    --colorBGCreation3: rgba(18, 18, 18, 1);
+    --colorBGCreation4: rgba(27, 27, 27, 1);
+    --colorBGBrand: rgba(254, 44, 85, 0.34);
+    --colorLinePrimary: rgba(255, 255, 255, 0);
+    --colorLineSecondary: rgba(255, 255, 255, 0.12);
+    --colorLineInput: rgba(255, 255, 255, 0.5);
+    --colorLinePrimary2: rgba(255, 255, 255, 0.2);
+    --colorLineSecondary2: rgba(255, 255, 255, 0);
+    --colorLineSecondary3: rgba(255, 255, 255, 0.5);
+    --colorLineDarker: rgba(0, 0, 0, 0.6);
+    --colorSDSecondary: rgba(0, 0, 0, 0.68);
+    --colorSDTertiary: rgba(0, 0, 0, 0.5);
+    --popperBackground: rgb(37, 37, 37);
+    --scrollbar: rgba(255, 255, 255, 0.08);
+    --default-layout-sidebar-background-color: rgba(37, 37, 37, 1);
+    --default-layout-sidebar-background-color-hover: rgba(46, 46, 46, 1);
+    --form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23adb5bd' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Inter';
+    font-size: 1.6rem;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: var(--colorBGPrimary);
+    color: var(--colorTextPrimary);
+}
+
+a {
+    color: var(--colorLink);
+    text-decoration: none;
+}
+
+.cormorant-upright {
+    font-family: 'Cormorant Upright', serif;
+}
+
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+}
+
+.carousel.carousel-slider .control-arrow:hover{
+    background: transparent !important;
+}
+
+.btn-back{
+    background: transparent;
+    border: 2px solid #eee;
+    padding: 0.5rem 1rem;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    border-radius: 5px;
+
+    svg{
+        margin-right: 10px;
+    }
+
+    &:hover{
+        background: #eee;
+    }
+}
+
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:active{
+    transform: scale(1.05);
+}
