@@ -1,0 +1,29 @@
+.wrapper {
+    padding: 20px 10px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #eee;
+
+    .back-btn {
+        background: transparent;
+        border: 2px solid #eee;
+        padding: 0.5rem 1rem;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        border-radius: 5px;
+        color: var(--colorTextSecondary);
+        font-size: 14px;
+        font-weight: 600;
+
+        svg {
+            margin-right: 10px;
+        }
+
+        &:hover {
+            background: #eee;
+        }
+    }
+}

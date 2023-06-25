@@ -9,3 +9,14 @@ export const getAllEmployee = async () => {
         return null;
     }
 }
+
+export const addEmployee = async (params) => {
+    try {
+        console.log("params: ", params);
+        const res = await request.post(`/employees/store`,params);
+        return res.data;
+    } catch (error) {
+        console.log(error)
+        return null;
+    }
+}
