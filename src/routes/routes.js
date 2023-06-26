@@ -9,6 +9,8 @@ const Home = lazy(() => import("~/pages/Home"));
 const NotFound = lazy(() => import("~/pages/NotFound"));
 const EmployeeManager = lazy(() => import("~/pages/Employee"));
 const AddEmployee = lazy(() => import("~/pages/AddEmployee"));
+const TotalIncome = lazy(() => import("~/pages/TotalIncome"));
+const VacationDay = lazy(() => import("~/pages/VacationDay"));
 
 // Public routes
 const publicRoutes = [
@@ -16,6 +18,8 @@ const publicRoutes = [
   { path: "*", component: NotFound, layout: null },
   { path: config.routes.employeeManager, component: EmployeeManager },
   { path: config.routes.addEmployee, component: AddEmployee },
+  { path: config.routes.totalIncome, component: TotalIncome },
+  { path: config.routes.vacationDays, component: VacationDay },
 ];
 
 const privateRoutes = [

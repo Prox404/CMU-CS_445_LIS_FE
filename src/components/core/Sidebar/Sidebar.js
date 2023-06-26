@@ -19,11 +19,11 @@ function Sidebar() {
                 <Link to='/employee-manager' className={cx('sidebar-item')}>
                     Employee manager
                 </Link>
-                <Link to='/product-manager' className={cx('sidebar-item')}>
-                    Quản lý sản phẩm
+                <Link to='/total-income' className={cx('sidebar-item')}>
+                    Total income
                 </Link>
-                <Link to='/order-manager' className={cx('sidebar-item')}>
-                    Quản lý đơn hàng
+                <Link to='/vacation-days' className={cx('sidebar-item')}>
+                    Vacation days
                 </Link>
             </div>
         </div>
