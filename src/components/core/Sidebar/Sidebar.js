@@ -25,6 +25,9 @@ function Sidebar() {
                 <Link to='/vacation-days' className={cx('sidebar-item')}>
                     Vacation days
                 </Link>
+                <Link to='/average-benefit-plan' className={cx('sidebar-item')}>
+                    Average benefit plan
+                </Link>
             </div>
         </div>
     </>);

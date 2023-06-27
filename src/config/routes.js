@@ -4,5 +4,6 @@ export const routes = {
     addEmployee: "/employees/add-employee",
     totalIncome: "/total-income",
     vacationDays: "/vacation-days",
+    everageBenefitPlan: "/average-benefit-plan",
   };
   

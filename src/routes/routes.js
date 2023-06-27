@@ -11,6 +11,7 @@ const EmployeeManager = lazy(() => import("~/pages/Employee"));
 const AddEmployee = lazy(() => import("~/pages/AddEmployee"));
 const TotalIncome = lazy(() => import("~/pages/TotalIncome"));
 const VacationDay = lazy(() => import("~/pages/VacationDay"));
+const AverageBenefitPlan = lazy(() => import("~/pages/AverageBenefitPlan"));
 
 // Public routes
 const publicRoutes = [
@@ -20,6 +21,7 @@ const publicRoutes = [
   { path: config.routes.addEmployee, component: AddEmployee },
   { path: config.routes.totalIncome, component: TotalIncome },
   { path: config.routes.vacationDays, component: VacationDay },
+  { path: config.routes.everageBenefitPlan, component: AverageBenefitPlan },
 ];
 
 const privateRoutes = [
