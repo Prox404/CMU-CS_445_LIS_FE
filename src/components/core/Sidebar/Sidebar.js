@@ -28,6 +28,13 @@ function Sidebar() {
                 <Link to='/average-benefit-plan' className={cx('sidebar-item')}>
                     Average benefit plan
                 </Link>
+                <Link to='/hiring-anniversary' className={cx('sidebar-item')}>
+                    Hiring anniversary 
+                </Link>
+                <Link to='/check-vacation-days' className={cx('sidebar-item')}>
+                    Check vacation days
+                </Link>
+
             </div>
         </div>
     </>);

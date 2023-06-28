@@ -40,3 +40,23 @@ export const getVacationDays = async () => {
         return null;
     }
 }
+
+export const getHiringAnniversary  = async (number) => {
+    try {
+        const res = await request.get(`/employees/check-hiring-anniversary${number ? `?daysThreshold=${number}` : ''}`);
+        return res.data;
+    } catch (error) {
+        console.log(error)
+        return null;
+    }
+}
+
+export const checkVacationDays  = async (number) => {
+    try {
+        const res = await request.get(`/employees/check-vacation-days${number ? `?daysThreshold=${number}` : ''}`);
+        return res.data;
+    } catch (error) {
+        console.log(error)
+        return null;
+    }
+}

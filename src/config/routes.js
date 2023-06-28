@@ -5,5 +5,7 @@ export const routes = {
     totalIncome: "/total-income",
     vacationDays: "/vacation-days",
     everageBenefitPlan: "/average-benefit-plan",
+    hiringAnniversary : "/hiring-anniversary",
+    checkVacationDays: "/check-vacation-days",
   };
   
