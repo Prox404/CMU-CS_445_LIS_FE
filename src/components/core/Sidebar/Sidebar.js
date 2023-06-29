@@ -34,6 +34,9 @@ function Sidebar() {
                 <Link to='/check-vacation-days' className={cx('sidebar-item')}>
                     Check vacation days
                 </Link>
+                <Link to='/employee-birthday' className={cx('sidebar-item')}>
+                    Employee birthday
+                </Link>
 
             </div>
         </div>

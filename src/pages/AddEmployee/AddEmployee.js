@@ -34,7 +34,8 @@ function AddEmployee() {
     PayRates_idPayRates: '1',
     VacationDays: '',
     PaidToDate: '',
-    PaidLastYear: ''
+    PaidLastYear: '',
+    Birthday : ''
   });
 
   // get all payrates for
@@ -94,6 +95,7 @@ function AddEmployee() {
       params.append('VacationDays', employeeData.VacationDays);
       params.append('PaidToDate', employeeData.PaidToDate);
       params.append('PaidLastYear', employeeData.PaidLastYear);
+      params.append('Birthday', employeeData.Birthday);
 
       let data = await EmployeeService.addEmployee(params);
       if (data?.msSQLresult && data?.mySQLresult) {
@@ -144,6 +146,16 @@ function AddEmployee() {
             type="text"
             name="Last_Name"
             value={employeeData.Last_Name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className={cx('form-row')}>
+          <label>Birthday:</label>
+          <input
+            type="date"
+            name="Birthday"
+            value={employeeData.Birthday}
             onChange={handleChange}
             required
           />

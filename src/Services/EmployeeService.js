@@ -60,3 +60,13 @@ export const checkVacationDays  = async (number) => {
         return null;
     }
 }
+
+export const getEmployeeBirthday  = async (month) => {
+    try {
+        const res = await request.get(`/employees/get-employee-within-month${month ? `?month=${month}` : ''}`);
+        return res.data;
+    } catch (error) {
+        console.log(error)
+        return null;
+    }
+}
