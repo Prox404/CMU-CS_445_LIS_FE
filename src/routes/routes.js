@@ -14,6 +14,7 @@ const VacationDay = lazy(() => import("~/pages/VacationDay"));
 const AverageBenefitPlan = lazy(() => import("~/pages/AverageBenefitPlan"));
 const HiringAnniversary = lazy(() => import("~/pages/HiringAnniversary"));
 const VacationDays = lazy(() => import("~/pages/VacationDays"));
+const EditEmployee = lazy(() => import("~/pages/EditEmployee"));
 const BirthDay = lazy(() => import("~/pages/BirthDay"));
 
 // Public routes
@@ -28,6 +29,7 @@ const publicRoutes = [
   { path: config.routes.hiringAnniversary, component: HiringAnniversary },
   { path: config.routes.checkVacationDays, component: VacationDays },
   { path: config.routes.employeeBirthday, component: BirthDay },
+  { path: config.routes.editEmployee, component: EditEmployee },
 ];
 
 const privateRoutes = [

@@ -7,6 +7,7 @@ export const routes = {
     everageBenefitPlan: "/average-benefit-plan",
     hiringAnniversary : "/hiring-anniversary",
     checkVacationDays: "/check-vacation-days",
-    employeeBirthday : "/employee-birthday"
+    employeeBirthday : "/employee-birthday",
+    editEmployee: "/employee-manager/edit/:id",
   };
   

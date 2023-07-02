@@ -3,6 +3,8 @@ import styles from './Employee.module.scss'
 import * as EmployeeService from '~/services/EmployeeService';
 import classNames from "classnames/bind";
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import Wrapper from '~/components/Wrapper/Wrapper';
 
 const cx = classNames.bind(styles);
 
@@ -18,13 +20,22 @@ function Employee() {
         fetchEmployees();
     }, []);
 
-    const handleEdit = (employeeId) => {
-        // Xử lý sự kiện Edit cho nhân viên với id tương ứng
-        console.log(`Edit employee with id ${employeeId}`);
-    };
+    // const handleEdit = (employeeId) => {
+    //     // Xử lý sự kiện Edit cho nhân viên với id tương ứng
 
-    const handleDelete = (employeeId) => {
+    //     console.log(`Edit employee with id ${employeeId}`);
+    // };
+
+    const handleDelete = async (employeeId) => {
         // Xử lý sự kiện Delete cho nhân viên với id tương ứng
+        let data = await EmployeeService.deleteEmployees(employeeId);
+        if (!data.error) {
+            setEmployees(employees.filter((employee) => employee.idEmployee != employeeId));
+            toast.success('Delete employee successfully!');
+        }else{
+            toast.error('Delete employee failed!');
+        }
+
         console.log(`Delete employee with id ${employeeId}`);
     };
 
@@ -42,7 +53,7 @@ function Employee() {
     };
 
     return (
-        <div>
+        <Wrapper>
             <h2>Employee Management</h2>
             <div className={cx('header')}>
                 <input
@@ -70,14 +81,14 @@ function Employee() {
                             <td>{`${employee.FirstName} ${employee.LastName}`}</td>
                             <td>{employee.Email}</td>
                             <td>
-                                <button className={cx('edit-btn')} onClick={() => handleEdit(employee.idEmployee)}>Edit</button>
+                                <Link className={cx('edit-btn')} to={`/employee-manager/edit/${employee.idEmployee}`}>Edit</Link>
                                 <button className={cx('delete-btn')} onClick={() => handleDelete(employee.idEmployee)}>Delete</button>
                             </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
-        </div>
+        </Wrapper>
     );
 }
 

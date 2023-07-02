@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Wrapper from '~/components/Wrapper/Wrapper';
 import * as EmployeeService from '~/services/EmployeeService';
 
 const BirthDay = () => {
@@ -26,8 +27,8 @@ const BirthDay = () => {
 
         // Hiển thị dữ liệu nhân viên
         return (
-            <table>
-                <thead>
+            <table className='table'>
+                <thead className='table-header'>
                     <tr>
                         <th>Employee ID</th>
                         <th>First Name</th>
@@ -53,8 +54,8 @@ const BirthDay = () => {
     };
 
     return (
-        <div>
-            <h1>BirthDay</h1>
+        <Wrapper>
+            <h1>Employee BirthDay</h1>
             <select value={selectedMonth} onChange={handleMonthChange}>
                 <option value="">Select a month</option>
                 <option value="1">January</option>
@@ -71,7 +72,7 @@ const BirthDay = () => {
                 <option value="12">December</option>
             </select>
             {renderEmployeeData()}
-        </div>
+        </Wrapper>
     );
 };
 

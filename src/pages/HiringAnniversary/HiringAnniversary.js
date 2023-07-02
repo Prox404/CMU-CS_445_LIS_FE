@@ -36,7 +36,7 @@ const HiringAnniversary = () => {
                 value={daysThreshold}
                 onChange={handleDaysThresholdChange}
             />
-            <button onClick={fetchEmployees}>Fetch Employees</button>
+            <button className='fetch' onClick={fetchEmployees}>Fetch Employees</button>
 
             <table>
                 <thead>

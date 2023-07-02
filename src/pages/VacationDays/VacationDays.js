@@ -34,9 +34,9 @@ const VacationDays = () => {
         onChange={handleDaysThresholdChange}
         placeholder="Enter days threshold"
       />
-        <button onClick={fetchEmployees}>Fetch Employees</button>
-      <table>
-        <thead>
+        <button className='fetch' onClick={fetchEmployees}>Fetch Vacation Days</button>
+      <table className='table'>
+        <thead className='table-header'>
           <tr>
             <th>Employee ID</th>
             <th>Employee Number</th>

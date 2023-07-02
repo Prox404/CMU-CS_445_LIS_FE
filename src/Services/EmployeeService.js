@@ -20,6 +20,38 @@ export const addEmployee = async (params) => {
         return null;
     }
 }
+export const getEmployeeByID = async (id) => {
+    try {
+        console.log("params: ", id);
+        const res = await request.get(`/employees/get/${id}`);
+        return res.data;
+    } catch (error) {
+        console.log(error)
+        return null;
+    }
+}
+
+export const updateEmployee = async (params) => {
+    try {
+        console.log("params: ", params);
+        const res = await request.put(`/employees/update`,params);
+        return res.data;
+    } catch (error) {
+        console.log(error)
+        return null;
+    }
+}
+
+export const deleteEmployees = async (id) => {
+    try {
+        console.log("params: ", id);
+        const res = await request.del(`/employees/delete?Employee_ID=${id}`);
+        return res.data;
+    } catch (error) {
+        console.log(error)
+        return null;
+    }
+}
 
 export const getTotalIncome = async () => {
     try {
