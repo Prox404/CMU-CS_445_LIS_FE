@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import classNames from 'classnames/bind';
 import Wrapper from '~/components/Wrapper/Wrapper';
 
 const averageBenefitsData = {
